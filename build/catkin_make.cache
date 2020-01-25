@@ -1,0 +1,2 @@
+ball_chaser:my_robot
+-DCATKIN_DEVEL_PREFIX=/home/kyuhwanyeon/workspace/004_catkin_ws_GoChaseit/devel -DCMAKE_INSTALL_PREFIX=/home/kyuhwanyeon/workspace/004_catkin_ws_GoChaseit/install -G Unix Makefiles

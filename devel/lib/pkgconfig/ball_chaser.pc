@@ -1,0 +1,8 @@
+prefix=/home/kyuhwanyeon/workspace/004_catkin_ws_GoChaseit/devel
+
+Name: ball_chaser
+Description: Description of ball_chaser
+Version: 0.0.0
+Cflags: -I/home/kyuhwanyeon/workspace/004_catkin_ws_GoChaseit/devel/include
+Libs: -L/home/kyuhwanyeon/workspace/004_catkin_ws_GoChaseit/devel/lib 
+Requires: 
