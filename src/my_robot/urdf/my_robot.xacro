@@ -157,7 +157,7 @@
   </joint>
 
   <!-- link =  camera -->
-  <link name='camera'>
+  <link name='camera_link'>
     <pose>0 0 0 0 0 0</pose>
 
     <inertial>
@@ -188,12 +188,44 @@
 
   <!-- joint =  camera -->
   <joint type="fixed" name="camera_joint">
-    <origin xyz="0.2 0 0" rpy="0 0 0"/>
-    <child link="camera"/>
+    <origin xyz="0.1 0 0.1" rpy="0 0 0"/>
+    <child link="camera_link"/>
     <parent link="chassis"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>
   </joint>
 
+<!-- rgb-d camera -->
+<link name="camera_link_optical">
+     <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+       <geometry>
+	<box size=".05 .05 .05"/>
+      </geometry>
+    </visual>
+
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy=" 0 0 0"/>
+      <inertia
+	  ixx="0.000001" ixy="0" ixz="0"
+	  iyy="0.000001" iyz="0"
+	  izz="0.000001"
+      />
+    </inertial>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+       <geometry>
+	<box size=".05 .05 .05"/>
+      </geometry>
+    </collision>
+
+</link>
+  <joint name="camera_link_optical_joint" type="fixed">
+    <origin xyz="0.1 0 0.1" rpy="-1.5707 0  -1.5707" />
+    <parent link="camera_link"/>
+    <child link="camera_link_optical"/>
+  </joint>
 
   <!-- link =  hokuyo -->
   <link name='hokuyo'>

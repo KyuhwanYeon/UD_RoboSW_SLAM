@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD="/home/khyeon/workspace/010_Localization/build"
+export PWD="/home/khyeon/workspace/019_MapMyWorld/build"

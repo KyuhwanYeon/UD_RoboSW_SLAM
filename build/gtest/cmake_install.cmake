@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/khyeon/workspace/010_Localization/install")
+  set(CMAKE_INSTALL_PREFIX "/home/khyeon/workspace/019_MapMyWorld/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/khyeon/workspace/010_Localization/build/gtest/gtest/cmake_install.cmake")
+  include("/home/khyeon/workspace/019_MapMyWorld/build/gtest/gtest/cmake_install.cmake")
 
 endif()
 

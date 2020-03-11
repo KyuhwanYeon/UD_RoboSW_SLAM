@@ -67,14 +67,14 @@ set(ball_chaser_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(ball_chaser_SOURCE_PREFIX /home/khyeon/workspace/010_Localization/src/ball_chaser)
-  set(ball_chaser_DEVEL_PREFIX /home/khyeon/workspace/010_Localization/devel)
+  set(ball_chaser_SOURCE_PREFIX /home/khyeon/workspace/019_MapMyWorld/src/ball_chaser)
+  set(ball_chaser_DEVEL_PREFIX /home/khyeon/workspace/019_MapMyWorld/devel)
   set(ball_chaser_INSTALL_PREFIX "")
   set(ball_chaser_PREFIX ${ball_chaser_DEVEL_PREFIX})
 else()
   set(ball_chaser_SOURCE_PREFIX "")
   set(ball_chaser_DEVEL_PREFIX "")
-  set(ball_chaser_INSTALL_PREFIX /home/khyeon/workspace/010_Localization/install)
+  set(ball_chaser_INSTALL_PREFIX /home/khyeon/workspace/019_MapMyWorld/install)
   set(ball_chaser_PREFIX ${ball_chaser_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/khyeon/workspace/010_Localization/install/lib;/home/khyeon/workspace/010_Localization/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/khyeon/workspace/019_MapMyWorld/install/lib;/home/khyeon/workspace/019_MapMyWorld/devel/lib;/home/khyeon/workspace/010_Localization/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

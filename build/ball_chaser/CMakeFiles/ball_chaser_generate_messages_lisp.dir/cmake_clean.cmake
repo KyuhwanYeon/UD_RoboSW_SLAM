@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ball_chaser_generate_messages_lisp"
-  "/home/khyeon/workspace/010_Localization/devel/share/common-lisp/ros/ball_chaser/srv/DriveToTarget.lisp"
+  "/home/khyeon/workspace/019_MapMyWorld/devel/share/common-lisp/ros/ball_chaser/srv/DriveToTarget.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

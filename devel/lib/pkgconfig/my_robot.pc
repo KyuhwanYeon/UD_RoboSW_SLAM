@@ -1,4 +1,4 @@
-prefix=/home/khyeon/workspace/010_Localization/devel
+prefix=/home/khyeon/workspace/019_MapMyWorld/devel
 
 Name: my_robot
 Description: Description of my_robot

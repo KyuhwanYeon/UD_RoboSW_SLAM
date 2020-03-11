@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ball_chaser_generate_messages_cpp"
-  "/home/khyeon/workspace/010_Localization/devel/include/ball_chaser/DriveToTarget.h"
+  "/home/khyeon/workspace/019_MapMyWorld/devel/include/ball_chaser/DriveToTarget.h"
 )
 
 # Per-language clean rules from dependency scanning.
