@@ -1,2 +1,0 @@
-ball_chaser:my_robot:teleop_twist_keyboard
--DCATKIN_DEVEL_PREFIX=/home/khyeon/workspace/019_MapMyWorld/devel -DCMAKE_INSTALL_PREFIX=/home/khyeon/workspace/019_MapMyWorld/install -G Unix Makefiles

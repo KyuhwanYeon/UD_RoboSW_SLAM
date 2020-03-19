@@ -26,14 +26,14 @@
     <collision name='collision'>
       <origin xyz="0 0 0" rpy=" 0 0 0"/> 
       <geometry>
-        <box size=".4 .2 .1"/>
+        <box size=".4 .25 .1"/>
       </geometry>
     </collision>
 
     <visual name='chassis_visual'>
       <origin xyz="0 0 0" rpy=" 0 0 0"/>
       <geometry>
-        <box size=".4 .2 .1"/>
+        <box size=".4 .25 .1"/>
       </geometry>
     </visual>
 
@@ -156,43 +156,8 @@
     <dynamics damping="1.0" friction="1.0"/>
   </joint>
 
-  <!-- link =  camera -->
-  <link name='camera_link'>
-    <pose>0 0 0 0 0 0</pose>
+ 
 
-    <inertial>
-      <mass value="0.1"/>
-      <origin xyz="0.0 0 0" rpy=" 0 0 0"/>
-      <inertia
-          ixx="1e-6" ixy="0" ixz="0"
-          iyy="1e-6" iyz="0"
-          izz="1e-6"
-      />
-    </inertial>
-
-    <collision name='camera_collision'>
-      <origin xyz="0 0 0" rpy=" 0 0 0"/>
-      <geometry>
-        <box size = "0.05 0.05 0.05"/>
-      </geometry>
-    </collision>
-
-    <visual name='camera_visual'>
-      <origin xyz="0 0 0" rpy=" 0 0 0"/>
-      <geometry>
-        <box size = "0.05 0.05 0.05"/>
-      </geometry>
-    </visual>
-  </link>
-
-
-  <!-- joint =  camera -->
-  <joint type="fixed" name="camera_joint">
-    <origin xyz="0.1 0 0.1" rpy="0 0 0"/>
-    <child link="camera_link"/>
-    <parent link="chassis"/>
-    <axis xyz="0 1 0" rpy="0 0 0"/>
-  </joint>
 
 <!-- rgb-d camera -->
 <link name="camera_link_optical">
@@ -222,9 +187,10 @@
 
 </link>
   <joint name="camera_link_optical_joint" type="fixed">
-    <origin xyz="0.1 0 0.1" rpy="-1.5707 0  -1.5707" />
-    <parent link="camera_link"/>
-    <child link="camera_link_optical"/>
+    <origin xyz="0.075 0 0.075" rpy="-1.5707 0  -1.5707" />
+    <child link="camera_link_optical"/>    
+    <parent link="chassis"/>
+    
   </joint>
 
   <!-- link =  hokuyo -->
@@ -258,7 +224,7 @@
 
   <!-- joint =  hokuyo_joint lidar  -->
   <joint type="fixed" name="hokuyo_joint">
-    <origin xyz="0.15 0.0 0.1" rpy="0 0 0"/>
+    <origin xyz="0.0 0.0 0.1" rpy="0 0 0"/>
     <child link="hokuyo"/>
     <parent link="chassis"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>
@@ -273,4 +239,14 @@
   <gazebo reference="right_wheel">
     <material>Gazebo/Green</material>
   </gazebo>
+
+  <gazebo reference="chassis">
+    <material>Gazebo/BlueTransparentOverlay</material>
+  </gazebo>
+
+  <gazebo reference="camera_link_optical">
+    <material>Gazebo/RedTransparent</material>
+  </gazebo>
+
+
 </robot>
